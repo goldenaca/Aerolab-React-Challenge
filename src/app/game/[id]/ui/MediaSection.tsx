@@ -6,7 +6,7 @@ export const MediaSection = async ({ data }: { data: GameData }) => {
   return (
     <div className="mt-8">
       <h1 className="font-semibold">Media</h1>
-      {!data.screenshots && (
+      {!data?.screenshots && (
         <p className="text-gray-600 text-sm sm:text-base">
           No media data found.
         </p>

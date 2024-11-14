@@ -8,10 +8,10 @@ interface Props {
 }
 
 async function TagSection({ data }: Props) {
-  const rating = data.total_rating
-    ? (data.total_rating / 10).toFixed(1)
+  const rating = data?.total_rating
+    ? (data?.total_rating / 10).toFixed(1)
     : "Not Found";
-  const date = data.first_release_date
+  const date = data?.first_release_date
     ? dayjs.unix(data?.first_release_date).format("DD/MM/YYYY")
     : "Not Found";
   const genres = data?.genres?.map((gnre, index) =>
