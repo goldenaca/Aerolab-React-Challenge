@@ -4,7 +4,7 @@ import { GameData } from "@/types/types";
 export async function fetchGameData(id: string): Promise<GameData> {
   const token = process.env.TOKEN as string;
   const clientId = process.env.CLIENT_ID as string;
-  console.error({ cli: clientId, tok: "token" });
+  console.error({ cli: clientId, tok: token });
   try {
     const res = await fetch("https://api.igdb.com/v4/games", {
       method: "POST",
